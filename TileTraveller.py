@@ -16,3 +16,29 @@ tile_8 = 3.2
 tile_9 = 3.1
 position = tile1
 win = False
+
+
+while win == False:
+    
+    if position == tile1:
+        direction = input("You can travel: (N)orth.")
+            if command = 'n' or command = 'N':
+                position = tile2
+            else:
+                print("Not a valid direction! ")
+    if position == tile2:
+        direction = input("You can travel: (N)orth or (E)ast or (S)outh.")
+    if position == tile3:
+        direction = input("You can travel: (E)east or (S)outh.")
+    if position == tile4:
+        direction = input("You can travel: (W)est or (S)outh.")
+    if position == tile5:
+        direction = input("You can travel: (W)est or (S)outh.")
+    if position == tile6:
+        direction = input("You can travel: (N)orth.")
+    if position == tile7:
+        direction = input("You can travel: (W)est or (S)outh.")
+    if position == tile8:
+        direction = input("You can travel: (N)orth or (S)outh.")
+    if position == tile9:
+        win = True
