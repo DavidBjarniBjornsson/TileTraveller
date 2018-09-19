@@ -14,31 +14,123 @@ tile_6 = 2.1
 tile_7 = 3.3
 tile_8 = 3.2
 tile_9 = 3.1
-position = tile1
+position = tile_1
 win = False
 
+validation = 1 
 
-while win == False:
-    
-    if position == tile1:
-        direction = input("You can travel: (N)orth.")
-            if command = 'n' or command = 'N':
-                position = tile2
-            else:
-                print("Not a valid direction! ")
-    if position == tile2:
-        direction = input("You can travel: (N)orth or (E)ast or (S)outh.")
-    if position == tile3:
-        direction = input("You can travel: (E)east or (S)outh.")
-    if position == tile4:
-        direction = input("You can travel: (W)est or (S)outh.")
-    if position == tile5:
-        direction = input("You can travel: (W)est or (S)outh.")
-    if position == tile6:
-        direction = input("You can travel: (N)orth.")
-    if position == tile7:
-        direction = input("You can travel: (W)est or (S)outh.")
-    if position == tile8:
-        direction = input("You can travel: (N)orth or (S)outh.")
-    if position == tile9:
+while not win:
+    if position == tile_1:
+        
+        if validation == 1:
+            print("You can travel: (N)orth.")
+        command = str(input("Direction: "))
+        if command == 'n' or command == 'N':
+            position = tile_2
+            win = False
+            validation = 1
+        else:
+            print("Not a valid direction!")
+            validation = 0
+    elif position == tile_2:
+        
+        if validation == 1:
+            print("You can travel: (N)orth or (E)ast or (S)outh.")
+        command = str(input("Direction: "))
+        if command == 'N' or command == 'n':
+            position = tile_3
+            validation = 1
+        elif command == 'E' or command == 'e':
+            position = tile_5
+            validation = 1
+        elif command == 'S' or command == 's':
+            position = tile_1
+            validation = 1
+        else:
+            print("Not a valid direction!")
+            validation = 0
+    elif position == tile_3:
+
+        if validation == 1:
+            print("You can travel: (E)ast or (S)outh.")
+        command = str(input("Direction: "))
+        if command == 'E' or command == 'e':
+            position = tile_4
+            validation = 1
+        elif command == 'S' or command == 's':
+            position = tile_2
+            validation = 1
+        else:
+            print("Not a valid direction!")
+            validation = 0
+    elif position == tile_4:
+
+        if validation == 1:
+            print("You can travel: (E)ast or (W)est.")
+        command = str(input("Direction: "))
+        if command == 'W' or command == 'w':
+            position = tile_3
+            validation = 1
+        elif command == 'E' or command == 'e':
+            position = tile_7
+            validation = 1
+        else:
+            print("Not a valid direction!")
+            validation = 0
+    elif position == tile_5:
+
+        if validation == 1:
+            print("You can travel: (S)outh or (W)est.")
+        command = str(input("Direction: "))
+        if command == 'S' or command == 's':
+            position = tile_6
+            validation = 1
+        elif command == 'W' or command == 'w':
+            position = tile_2
+            validation = 1
+        else:
+            print("Not a valid direction!")
+            validation = 0
+    elif position == tile_6:
+
+        if validation == 1:
+            print("You can travel: (N)orth.")
+        command = str(input("Direction: "))
+        if command == 'N' or command == 'n':
+            position = tile_5
+            validation = 1
+        else:
+            print("Not a valid direction!")
+            validation = 0
+    elif position == tile_7:
+
+        if validation == 1:
+            print("You can travel: (S)outh or (W)est.")
+        command = str(input("Direction: "))
+        if command == 'W' or command == 'w':
+            position = tile_4
+            validation = 1
+        elif command == 'S' or command == 's':
+            position = tile_8
+            validation = 1
+        else:
+            print("Not a valid direction!")
+            validation = 0
+    elif position == tile_8:
+
+        if validation == 1:
+            print("You can travel: (N)orth or (S)outh.")
+        command = str(input("Direction: "))
+        if command == 'N' or command == 'n':
+            position = tile_7
+            validation = 1
+        elif command == 'S' or command == 's':
+            position = tile_9
+            validation = 1
+        else:
+            print("Not a valid direction!")
+            validation = 0
+    elif position == tile_9:
+
+        print("Victory!")
         win = True
