@@ -60,7 +60,7 @@ while not win:
         else:
             invalid()
 
-        elif position == tile_2:
+    elif position == tile_2:
         
         if validation == 1:
             NES()
