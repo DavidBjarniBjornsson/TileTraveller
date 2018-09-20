@@ -1,3 +1,9 @@
+#https://github.com/DavidBjarniBjornsson/TileTraveller
+
+# 1: Implementation two was a little bit easier because of the time saved by making functions for the directions. But because I didn´t find a way to use functions for the if statements, it still took quite some time
+# 2: Implementation two is more readable beacuse it´s cleaner writing and not as big of a mess as implementation one. Using functions to print out the directions makes the code more readble
+# 3: Using functions I was able to save myself quite some time not having to write upp every single print message. But that was about it.  
+
 # One big while loop to keep the player in the game
 # Player starts in tyle 1,1
 # Player enters the direction in which he wants to go
@@ -42,24 +48,19 @@ def NES():
     print("You can travel: (N)orth or (E)ast or (S)outh.")
     return
 
-
-
-
-
-
 while not win:
     if position == tile_1:
         if validation == 1:
             N()
         command = str(input("Direction: "))
-        if command == 'n' or command == 'N':
-            position = tile_2
+        if command == 'n' or command == 'N': 
+            position = tile_2   
             win = False
             validation = 1
         else:
             invalid()
-    
-    elif position == tile_2:
+
+        elif position == tile_2:
         
         if validation == 1:
             NES()
@@ -77,7 +78,6 @@ while not win:
             invalid()
     
     elif position == tile_3:
-
         if validation == 1:
             ES()
         command = str(input("Direction: "))
@@ -91,7 +91,6 @@ while not win:
             invalid()
     
     elif position == tile_4:
-
         if validation == 1:
             EW()
         command = str(input("Direction: "))
@@ -104,7 +103,6 @@ while not win:
         else:
             invalid()
     elif position == tile_5:
-
         if validation == 1:
             SW()
         command = str(input("Direction: "))
@@ -117,7 +115,6 @@ while not win:
         else:
             invalid()
     elif position == tile_6:
-
         if validation == 1:
             N()
         command = str(input("Direction: "))           
@@ -127,7 +124,6 @@ while not win:
         else:
             invalid()
     elif position == tile_7:
-
         if validation == 1:
             SW()
         command = str(input("Direction: "))
@@ -139,8 +135,8 @@ while not win:
             validation = 1
         else:
             invalid()
+    
     elif position == tile_8:
-
         if validation == 1:
             NS()
         command = str(input("Direction: "))
